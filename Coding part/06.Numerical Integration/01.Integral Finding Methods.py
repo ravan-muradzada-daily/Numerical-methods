@@ -92,7 +92,7 @@ def romberg(approxs, n):
     for i in range(1, n):
         for j in range(1, i+1):
             approxs[i][j] = ((4**j) * approxs[i][j-1] - approxs[i-1][j-1]) / ((4**j) - 1)
-    10
+
     return approxs
 
 def calculate_true_relative_error(exact, approx):
