@@ -1,0 +1,36 @@
+The Intermediate Value Theorem states that if a continuous function f(x) takes on different values at two points, say a and b, then for any value N between f(a) and f(b), there exists at least one point c in the interval (a,b) such that:
+
+f(c) = N
+
+
+The Intermediate Value Theorem (IVT) can be used to determine the existence of a root in an interval 
+[a,b] based on the signs of f(a) and f(b). We can look at the cases according to the product f(a)⋅f(b):
+
+1) f(a) * f(b) < 0:
+
+If f(a) and f(b) have opposite signs, it means that one is positive and the other is negative. Therefore, the function f(x) must cross the x-axis at least once in the interval (a,b), indicating the presence of at least one root.
+This situation satisfies the conditions for applying the IVT. It guarantees that there exists a point c∈(a,b) such that f(c)=0.
+
+2) f(a) * f(b) > 0
+
+If f(a) and f(b) have the same signs, it means that either both are positive or both are negative. In this case, the function does not necessarily cross the x-axis, and there is no guarantee that a root exists in the interval (a,b).
+Although the function is continuous, the Intermediate Value Theorem does not apply here to prove the existence of a root.
+
+3) f(a) * f(b) = 0
+
+At least one of the endpoints is a root.
+
+
+----------------------------------------------------------
+
+Example: we are given a function x^3 - 2*x^2 - 5 = 0. Show that it has at least one root between [1, 3] interval.
+
+Solution:
+
+Firstly, we need to approve that the function is continuous between the given interval. We know that there is no limit for this function, so there is no point where the function is not defined, so we can basically say, the function is continuous is in this interval.
+
+Let's write it as a function: f(x) = x^3 - 2*x^2 - 5 
+and put values, respectively: f(1) = 1 - 2 - 5 = -6, f(3) = 27 - 18 - 5 = 4. 
+
+We check and get that f(1) * f(3) < 0.
+So that refers, there is at least one point in this interval where the function has a root.

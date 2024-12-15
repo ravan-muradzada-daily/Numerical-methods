@@ -1,0 +1,57 @@
+From the previous files, you already know that we use Newton Raphson method to solve nonlinear equations with one variable.
+
+However, this method has a specific implementation which can solve a system of nonlinear equations.
+In this algorithm, partial derivative is used.
+
+
+What is algorithm?
+
+First we need to have initial guesses for each variable.
+
+For explanation, let's take example equations like that:
+
+x^2 + y^2 + z^2 - 3 = 0
+x^2 + y^2 - z - 1 = 0
+x + y + z - 3 = 0
+
+Let's represent it as vector:
+
+F(x, y, z) = [
+    x^2 + y^2 + z^2,
+    x^2 + y^2 - z - 1,
+    x + y + z - 3
+]
+
+Morover we need to have Jacobian matrix.
+is the matrix of first partial derivatives of each equation in f with respect to each variable x, y and z.
+
+So we can write Jacobian matrix for the equation like that:
+
+J(x, y, z) = [
+    [2x, 2y, 2z],
+    [2x, 2y, -1],
+    [1, 1, 1]
+]
+
+
+After these we can start iterative formula of Newton-Raphson.
+
+So in each iteration we need to find new guesses.
+
+Formula for finding new guesses is like that:
+
+newGuess = currentGuess - (inverseOF(J(currentGuess)) * F(currentGuess))
+
+Here currentGuess means current_X, current_Y and current_Z.
+
+There are some useful functions in numpy to manipulate with some functions.
+
+Such us, "inv" function from numpy is used to find inverse of the matrix and @ is used to find multiplication of two matrices like "firstMatrix @ secondMatrix".
+
+
+What is stopping criteria?
+
+If the magnitude of the F(x, y, z) vector is less than the given error value, we can stop the iteration.
+To find out magnitude in numpy there is "norm" function.
+It sums squares of the elements of the vector and at the last find its square-root.
+

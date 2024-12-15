@@ -1,0 +1,65 @@
+Truncation Error helps us when an infinite process (like an infinite series or a continuous function) is approximated by a finite process. It is the difference between the true, exact value and the approximation obtained by truncating or cutting off part of the process. Truncation error is common in numerical methods where an approximation is used instead of an exact calculation.
+
+Causes of Truncation Error
+
+-Finite Sum of Infinite Series: Approximating an infinite series by summing only the first few terms.
+-Numerical Differentiation or Integration: Using finite differences or a limited number of intervals for approximating derivatives or integrals.
+-Approximating a Function with a Polynomial: Using a Taylor or Maclaurin series expansion and stopping at a certain term, instead of including all terms.
+
+
+truncate error = exact - sumOfSomeTerms
+
+-------------------------------------------
+
+Example question:
+Using first two terms calculate truncate error for sin(0.5) Maclaurin series.
+
+Firstly, it is known that the Maclaurin series of sin(x) is equal to:
+sin(x) = x - x^3/3! + x^5/5! - x^7/7! + .....
+
+For the first two terms:
+sin(x) = x - x^3/3!
+sin(0.5) = 0.4791667
+
+If we calculate the exact value of this using calculator or python, we will get:
+sin(0.5) = 0.4794255386
+
+
+Let's calculate truncate error:
+
+E = exact - approximated = 0.4794255386 - 0.4791667 = 
+= 0.0002588.
+
+The truncate value is 0002588.
+
+The python code for that problem:
+
+======================================================
+import math
+
+def calculateTruncatedValue(x, term):
+    sum = 0
+
+    for i in range(term):
+        currentTerm = (x ** (2*i + 1)) / (math.factorial(2*i + 1))
+        if i % 2 == 1:
+            currentTerm = -currentTerm
+
+        sum += currentTerm
+
+    return sum
+
+def findExactValue(x):
+    return math.sin(x)
+
+x = 0.5
+term = 2
+
+exactValue = findExactValue(x)
+truncatedValue = calculateTruncatedValue(x, term)
+truncatingError = exactValue - truncatedValue
+
+print(f"Exact value is: {exactValue}")
+print(f"Truncated value is: {truncatedValue}")
+print(f"Truncating error: {truncatingError}")
+======================================================

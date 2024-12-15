@@ -1,0 +1,25 @@
+Curve fitting is the process of finding a mathematical function (like a line, a curve, or any other shape) that best represents the relationship between a set of data points. It's about drawing a curve or line that best "fits" or matches the data, so we can understand patterns and make predictions.
+
+In the problems we are given some points and wanted to find the best curve formula.
+
+
+Common Types of Curve Fitting:
+
+-Linear Fit: This is when the data points roughly follow a straight line. y = a*x + b
+
+-Polynomial Fit: If the data follows a curve (not a straight line), we use a polynomial. y = a * x^2 + b * x + c
+
+-Exponential or Logarithmic Fit: Some data grows or decays quickly and these types of data are often best fit by exponential or logarithmic curves. Exponential: y = a * e^(b*x) ; Logarithmic: y = a*ln(x) + b 
+
+
+
+----------------------------------------
+
+
+How to solve? 
+
+
+In the problem, we are given the type of curve fitting to use, such as linear and polynomial, etc. 
+Then based on the type, we write the main equation like (y=ax+b) and then put the given points into it.
+At the result, we get some number of equations. We write these equations as augmented matrix and solve it using "Least Squares Method".
+

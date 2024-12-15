@@ -1,0 +1,9 @@
+A Diagonally Dominant Tridiagonal System is a type of matrix system with specific structure and properties that make it efficient to solve. Here’s a breakdown:
+
+1. Tridiagonal Matrix Structure:
+
+A tridiagonal matrix is a square matrix where all non-zero elements are concentrated in the main diagonal, the diagonal immediately above it, and the diagonal immediately below it.
+
+2. Diagonally Dominant Condition:
+
+A matrix is diagonally dominant if, for each row, the magnitude of the main diagonal element is greater than or equal to the sum of the magnitudes of the other elements in that row.

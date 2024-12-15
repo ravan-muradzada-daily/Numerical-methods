@@ -1,0 +1,14 @@
+In linear algebra we have some solutions to solve system of linear equations.
+One of them is Gaussian elimination method. We can use this method in python to be able to solve the problems.
+However, to implement algorithm for Gaussian elimination method, the number of equations in the system should be equal to the number of variables. So the matrix should be square matrix.
+
+Mathematical solution is like that: We need to make zero the below part of the main diagonal and after that to solve the system.
+
+Our method has two parts:
+
+1. Forward elimination -> We try to make zero the below part of the main diagonal.
+
+2. Back Substitution -> We need to solve the matrix.
+ 
+You can find detailed information in the next files about each.
+

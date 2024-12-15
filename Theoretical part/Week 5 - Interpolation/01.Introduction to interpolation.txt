@@ -1,0 +1,11 @@
+In numerical methods, interpolation is a technique used to find an approximate value of a function when the exact value is unknown but nearby data points are available.
+
+It has four most known types:
+
+1. Linear Interpolation 
+
+2. Polynomial Interpolation
+
+3. Spline Interpolation
+
+4. Lagrange Interpolation

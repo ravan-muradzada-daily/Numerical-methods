@@ -1,0 +1,72 @@
+In this file and upcoming files we will speak about some solutions of the the equations with just one variable.
+-----------------------------------------------------
+
+What is linear and nonlinear equations?
+
+1) A linear equation is an equation where the variables appear with a power of 1 (no squares, cubes, or other powers), and the equation represents a straight line when graphed. The general form of a linear equation in one variable is:
+
+Examples of Linear Equations
+
+2x+3=0
+
+4x−7y=12
+
+x+2y−3z=5
+
+2) A nonlinear equation is an equation where the variables are raised to powers other than 1 or are multiplied together, making the equation represent curves or more complex shapes when graphed. These equations are not straight lines.
+
+The general forms can vary, but common examples include equations with:
+
+Variables raised to powers other than 1 (e.g., x^2, y^5)
+Variables multiplied together (e.g., xy).
+Functions such as trigonometric, logarithmic, or exponential functions (e.g., sin(x), e^x).
+
+
+Examples of Nonlinear Equations
+
+x^2 + y = 4
+
+sin(x)+y^2 = 1
+
+xy+3x=5
+-----------------------------------------------------
+
+Some equations might have the analytical solution, we can use math to calculate them. However, sometimes we can have the specific kinds of equations which cannot be solved using math.
+In that case, we should use numerical methods to calculate them. In most cases, the result got by using these methods will not be the pure exact, there may be some errors. Our purpose is to make these errors small enough according to our cases.
+
+
+Solution cases for this kind of the equations:
+
+1. Bracketing methods
+2. Open methods
+
+
+Bracketing Methods
+Bracketing methods are techniques that work by identifying an interval (or bracket) [a,b] where a root of the function lies. These methods rely on the Intermediate Value Theorem, which states that if the function takes on opposite signs at the endpoints of the interval, there must be at least one root in that interval.
+
+Characteristics:
+
+Start with two points a and b such that f(a) and f(b) have opposite signs. Continuously narrow down the interval until the root is approximated.
+
+
+Open Methods
+Open methods are techniques that do not require bracketing the root. Instead, they use a single point (or an approximation of the root) and iteratively improve this approximation. These methods can converge faster than bracketing methods but may not guarantee convergence if the initial guess is poor.
+
+Characteristics:
+
+Start with an initial guess and refine it iteratively.
+Do not necessarily check for sign changes, and therefore can fail to converge.
+
+
+-----------------------------------------------------
+
+Bracketing methods:
+1. Bisection method 
+2. False Position method (Linear Interpolation or Regula Falsi)
+
+
+Open methods:
+1. Fixed-Point Iteration
+2. Newton-Raphson Method
+3. Secant Method
+4. Modified Secant Method

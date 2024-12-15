@@ -1,0 +1,12 @@
+Round-off Error (or rounding error) refers to the difference between the exact value of a number and its rounded representation. This type of error occurs when numbers are approximated to a certain number of significant digits or decimal places due to limitations in representing real numbers in a finite format. It is a common issue in numerical computations, especially in computer programming and engineering applications.
+
+
+Causes of Round-off Error:
+
+Limited Precision: Computers and calculators often use a finite number of bits to represent numbers, which can lead to loss of precision when a number cannot be exactly represented.
+
+Rounding Rules: Different rounding methods (e.g., rounding up, rounding down, rounding to the nearest even number) can affect the accuracy of the results.
+
+Operations on Rounded Numbers: Performing arithmetic operations on numbers that have already been rounded can propagate and sometimes amplify round-off errors.
+
+Round-of error = exact value - rounded value

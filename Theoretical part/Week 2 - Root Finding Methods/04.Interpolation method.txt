@@ -1,0 +1,38 @@
+That is another bracketing method to find the root of some equations. So that also bases on decreasing the given interval like bisection method. However, it is faster than bisection method.
+The main difference is that here for mid value, we have specific value.
+mid = (a*f(b) - b*f(a)) / (f(b) - f(a)).
+By the way it was mid = (b - a) / 2 in bisection method.
+
+How can we use this algorithm?
+
+The algorithm is pretty similar to the bisection method. So iteratively, we divide the interval to two parts and using IVT, eliminate one of them and then continue the process with the second one. While dividing the interval, we use the formula above.
+
+The second difference with bisection method is about stopping criteria.
+
+Stoppping criteria can change according to whether the exact root is given or not.
+
+
+1) If the exact root is given:
+
+|exactRoot - currentRoot| < givenErrorValue.
+
+Also, we may be given the relative error which we can use similar to that. We can write:
+|(exactRoot-currentRoot) / exactRoot| < relativeError
+(The same with bisection method)
+
+
+2) If the exact root is not given:
+
+max(currentRoot - currentLowerBound, currentUpperBound - currentRoot) < givenErrorValue.
+If this condition satisfies, we can stop the loop.
+
+There are other stopping criterias, too. To use any of them is depend on which one is wanted.
+Some of them:
+
+1) |f(currentRoot)| < givenErrorValue
+2) |currentRoot - rootBeforecurrentRoot| < givenErrorValue
+3) |(currentRoot - rootBeforecurrentRoot) / currentRoot| < givenErrorValue
+
+
+
+{You can some coding examples in Coding part}.

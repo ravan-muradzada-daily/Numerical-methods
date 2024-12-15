@@ -1,0 +1,22 @@
+The Secant Method is an open numerical method used to find the root of a function f(x)=0. It is similar to the Newton-Raphson method, but it does not require the calculation of the derivative of the function. Instead, it approximates the derivative using a finite difference between two recent estimates of the root. This makes the Secant Method useful for cases where calculating the derivative is difficult or computationally expensive.
+
+When and Why Do We Use the Secant Method?
+
+-When the derivative is difficult to compute: If the derivative of the function is not readily available or is computationally expensive to calculate, the Secant Method is a good alternative to Newton-Raphson.
+-When the function is continuous in the given interval: The Secant Method requires that the function is continuous near the root.
+-To avoid calculating derivatives: Unlike Newton-Raphson, it does not require knowledge of the derivative, making it useful for functions where derivative information is unknown.
+
+The formula of the current value is like that:
+
+
+                     f(x(n)) * (x(n-1) - x(n))
+ x(n+1) = x(n)  -   ------------------------------
+                      f(x(n-1)) - f(x(n))
+
+Here x(n) means n'th value,
+x(n-1) means (n-1)th value
+and x(n+1) means (n+1)th value.
+
+Stopping criteria is that:
+
+abs(x2 - x1) < errorValuef

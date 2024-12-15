@@ -1,0 +1,22 @@
+The first part in the Gaussian elimination method in Python is forward elimination. Here we try to make the below part of the main daigonal zero.
+
+Steps:
+
+1. Start with Each Row as a Pivot:
+
+-The algorithm starts at the top row of the matrix (let’s call it Row 1).
+-For each row, we treat the first non-zero number in that row (starting from the left) as the "pivot element."
+-We aim to use this pivot element to eliminate (make zero) all entries below it in that column.
+
+2. Creating Zeros Below the Pivot:
+
+-Once we have our pivot element, we go to each row below it and use a multiplier (called the "factor") to make the numbers below the pivot zero.
+-This "factor" is calculated by dividing the number in the current row by the pivot element.
+-We then multiply the entire row with the pivot element by this factor and subtract it from the row below. This process removes the element in the target position, effectively turning it into zero.
+
+3. Repeat for Each Row Moving Downward:
+
+-Once we have completed making zeros below the pivot element in Row 1, we move to the next row (Row 2) and repeat the process.
+-Row 2 now becomes the new "pivot row," and the second element on the diagonal (the element in Row 2, Column 2) is our new pivot element.
+-We apply the same method to eliminate the elements below this pivot.
+-This process is repeated for each row until the matrix is in upper triangular form.

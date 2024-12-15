@@ -1,0 +1,26 @@
+Accuracy refers to how close a measured or calculated value is to the true or exact value. Higher accuracy means the result is very close to the actual value.
+
+Precision refers to the consistency or repeatability of measurements. High precision means that repeated measurements yield similar results, even if they are not close to the true value.
+
+------------------------------------------------------
+
+Error Propagation refers to how uncertainties or errors in input values affect the uncertainties or errors in the output result. In numerical methods, this is important because calculations often involve multiple steps, and errors can accumulate through these steps.
+
+------------------------------------------------------
+
+Total Numerical Error is the sum of two primary types of errors in numerical computations:
+
+1. Truncation Error:
+
+This arises from approximating a mathematical process by truncating an infinite series, using a finite difference instead of an exact derivative, or applying a limited number of steps.
+For example, in numerical integration, using a finite number of intervals introduces a truncation error.
+
+2. Round-off Error:
+
+This is caused by the limitations of representing numbers in a computer (finite precision). When a number is rounded to fit the available number of significant digits, some information is lost, causing round-off error.
+
+The total numerical error can be expressed as:
+
+Total Numerical Error=Truncation Error+Round-off Error
+
+As we increase the number of steps or terms in an approximation (like more intervals in integration), the truncation error decreases. However, this can increase the round-off error due to more arithmetic operations, leading to a trade-off between the two types of errors. The goal is to find an optimal balance that minimizes the total numerical error.

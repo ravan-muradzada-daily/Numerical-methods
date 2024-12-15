@@ -1,0 +1,35 @@
+A Diagonally Dominant Tridiagonal matrix is a special kind of matrix. (For more info, look at 05).
+
+To solve that kind of equations we have special method which is more efficient than standard Gaussian elimination method. That is called Thomas algorithm.
+
+(As you know the elements below the main diagonal in that kind of matrices are called subdiagonal, and the ones above are called superdiagonal.)
+
+In nxn matrix, let's call subdiagonal part "b", superdiagonal part "a" and main diagonal as "m", right handside as "r".
+"x" is the answer list.
+
+There are two steps in this algorithm: 
+
+1) Forward Elimination:
+
+Here we need to calculate two things iteratively:
+
+range: [1, n-1]
+    m[i] = m[i] - ((b[i] * a[i-1]) / m[i-1])
+
+    r[i] = r[i] - ((b[i] - r[i-1]) / m[i-1])
+
+
+2) Backward Substitution:
+
+x[n-1] = r[n-1] / m[n-1]
+
+range: [n-2, -1, -1]
+    x[i] = (r[i] - a[i] * x[i+1]) / m[i]
+
+
+----------------------------------
+
+x is our answer list.
+
+
+

@@ -1,0 +1,49 @@
+Partial pivoting is a technique used in the Gaussian elimination method for solving systems of linear equations. It helps enhance the numerical stability and accuracy of the results when working with matrices. Here’s a breakdown of its purpose, advantages, and how it differs from standard Gaussian elimination.
+
+Purpose of Partial Pivoting
+
+-Numerical Stability:
+
+When solving systems of equations, large differences in the magnitude of elements can lead to numerical instability. If a pivot (the element used to eliminate others) is too small relative to other elements in the column, it can result in significant round-off errors during calculations.
+Partial pivoting mitigates this issue by ensuring that the largest possible pivot element is used at each step, which reduces the risk of division by a small number.
+
+-Avoiding Division by Zero:
+
+If a pivot element is zero, division by zero will occur during the elimination process. Partial pivoting ensures that the algorithm swaps rows to avoid this situation.
+
+--------------------------------------------
+
+Steps in the Partial Pivoting Method:
+
+-Find the Pivot: In each column, identify the row with the largest absolute value in the pivot column from the current row to the last row.
+
+-Row Swapping: Swap the current row with the row containing the largest pivot element. This ensures that the pivot element is maximized, thus minimizing numerical errors.
+
+-Gaussian Elimination: Proceed with the standard Gaussian elimination process, eliminating the entries below the pivot.
+
+-Back Substitution: After transforming the matrix to upper triangular form, use back substitution to find the solution.
+
+--------------------------------------------
+
+Differences Between Partial Pivoting and Standard Gaussian Elimination
+
+1) Pivot Selection:
+
+Standard Gaussian Elimination: Uses the current pivot element without considering the other elements in the column, which can lead to numerical instability.
+
+Partial Pivoting: Selects the largest absolute value in the pivot column to use as the pivot, which helps maintain numerical stability.
+
+2) Row Swapping:
+
+Standard Gaussian Elimination: No swapping is done; it uses the elements as they are.
+Partial Pivoting: Involves row swapping to ensure that the pivot is the largest possible, thereby improving accuracy.
+
+3) Numerical Accuracy:
+
+Standard Gaussian Elimination: More prone to errors, especially with matrices that have a wide range of values or very small pivot elements.
+Partial Pivoting: Reduces the chance of significant round-off errors, providing more reliable solutions.
+
+4) Complexity:
+
+Standard Gaussian Elimination: Simpler in implementation but may lead to less reliable results in certain cases.
+Partial Pivoting: Slightly more complex due to the need to search for pivot elements and perform row swaps, but the trade-off is improved stability and accuracy.

@@ -1,0 +1,28 @@
+N-R -> new approximation: x = x - (fx / Dfx)
+
+Secant -> new approximation: x2 = x0 - (x1-x0) * f(x0) / (f(x1) - f(x0)) 
+
+Modified -> new approximation: x = x - x*delta*f(x) / (f(x+delta*x) - f(x))
+-----
+N-R system-> X = X - J_inv @ F. J->partial dervs (norm(F)<error) from numpy.linalg import norm, inv
+
+thomas-> factor = belowPart[i-1] / mainDiagonal[i-1]
+        mainDiagonal[i] -= abovePart[i-1] * factor
+        rightHandSide[i] -= factor * rightHandSide[i-1]
+
+        x[-1] = rightHandSide[-1] / mainDiagonal[-1]
+        x[i] = (rightHandSide[i] - abovePart[i] * x[i+1]) / mainDiagonal[i]
+
+curve_fit-> curve_fit(func,x,y)[0]
+
+newton int-> table[i][j] = (table[i+1][j-1] - table[i][j-1]) / (x_values[i+j] - x_values[i])
+    p *= (x - x_values[i-1])
+        result += b[i] * p 
+
+lagrange->for i in range(n):
+        p = 1
+        for j in range(n):
+            if i != j:
+                p *= ((x - x_values[j]) / (x_values[i] - x_values[j]))
+        
+        result += p * y_values[i]

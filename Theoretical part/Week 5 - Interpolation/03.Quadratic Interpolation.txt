@@ -1,0 +1,21 @@
+Quadratic interpolation is a method used to estimate the value of a function at a point 
+𝑥
+x, using three known data points. Unlike linear interpolation (which fits a straight line through two points), quadratic interpolation fits a second-degree polynomial (a parabola) through three points. This allows it to model curves more accurately.
+
+We use the formula based on: y = a*x^2 + b*x + c.
+
+Imagine we have given x and the points: (x0, f(x0)), (x1, f(x1)) and (x2, f(x2)).
+
+We have a formula to find f(x):
+
+f(x) = b0 + b1 * (x-x0) + b2 * (x-x0)*(x-x1)
+
+Here to find each b:
+(Let's say y0 = f(x0) and y1 = f(x1)).
+
+b0 = y0
+
+b1 = (y1 - y0) / (x1 - x0)
+
+b2 = ( (y2 - y1)/(x2 - x1) - (y1 - y0)/(x1 - x0) ) / (x2 - x0)
+

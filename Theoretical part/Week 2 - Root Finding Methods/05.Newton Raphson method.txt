@@ -1,0 +1,28 @@
+This is one of the methods to find the root of the nonlinear equations which don't have any analytical solutin. 
+The difference between that and previous two methods is that this is open methods.
+
+Open methods are numerical techniques used for finding the roots of equations where the initial guesses do not need to bracket the root. Unlike bracketing methods (like bisection), which require two initial guesses that enclose the root, open methods use a single initial guess or a few guesses to find the root. The logic behind open methods typically relies on derivative information or the behavior of the function to iteratively approach the root.
+That method is the fastest way to find the result.
+
+
+In this method, firstly the initial candidate number is selected.
+
+Then using this formula, we can find other candidate numbers and tries to approach the real root more:
+x(n) = x(n-1) + f(x(n-1)) / f'(x(n-1)).
+
+Here, x(n) means n'th candidate number and x(n-1) (n-1)th candidate number. As you can see, in each iteration, we use both given function itself and its derivative.
+
+
+What is stopping criteria here?
+
+1) If the exact root is given,
+the stopping criteria is
+|exactRoot - currentRoot| < givenErrorValue
+
+2) If the exact root is not given,
+the stopping criteria is
+|x(n+1) - x(n)| < givenErrorValue.
+
+OR
+
+(|x(n+1) - x(n)| / |x(n+1)|) < givenErrorValue.

@@ -1,0 +1,9 @@
+Lagrange Interpolation is a method used to estimate the value of a function at a given point based on its known values at other points. It uses a polynomial of degree n-1 (where n is the number of data points) to approximate the function.
+
+Formula for f_n(x):
+
+f_n(x) = sum(Li(x) * f(xi)) [i from zero to n]
+
+Here Li(x) is called cardinal and its formula is:
+
+Li(x) = multiplication((x-xj) / (xi-xj)) [j from zero to n]

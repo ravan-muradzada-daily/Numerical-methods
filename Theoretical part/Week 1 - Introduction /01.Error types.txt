@@ -1,0 +1,47 @@
+In Numerical Methods, error refers to the difference between an approximate value and the exact value of a quantity. Errors arise because most real-world problems cannot be solved exactly using numerical methods; instead, we use approximations.
+
+Types of Errors:
+
+1) Absolute error:
+
+The difference between the exact value and the approximat value.
+
+Absolute error = |x(exact) - x(approx)|
+
+2) Relative error:
+
+The ratio of the absolute error to the exact value. It gives a sense of how significant the error is compared to the true value.
+
+Relative error = |x(ex) - x(ap)| / |x(ex)|
+
+3) Truncation error:
+
+Occurs when an infinite process (like a series) is approximated by a finite process. For example, using a limited number of terms in a Taylor series.
+
+4) Round-off error:
+
+Arises due to the limitations of representing numbers on a computer. For instance, the number 𝜋 (pi) cannot be exactly represented in a finite number of decimal places.
+
+
+
+-----------------------------------------------------
+
+Morover, we can divide errors two parts according to other whether the exact value is known or not.
+
+1) True error - It can be computed when the exact value is known.
+There are two kinds of true error: 
+
+-Absolute true error: 
+E = |exactValue - approximateValue| = Et
+
+-Absolute Percent Relative error:
+e = |(exactValue-approximateValue) / exactValue| * 100% = et
+
+2) Estimaded (approximated) error - We do not need exact root to calculate estimated error.
+There are also two kinds of estimated error:
+
+-Estimaded Absolute error:
+E = |currentEstimate - previousEstimate|
+
+-Estimaded Absolute Percent Relative error:
+e = |(currentEstimate - previousEstimate) / currentEstimate| * 100%

@@ -1,0 +1,34 @@
+Diagonally Dominant matrices are specific kind of the matrices. 
+
+If a matrix is diagonally dominant, that means for this matrix in each row this rule is met:
+
+The sum of abs(elements) (except main diagonal element for the current row) should be less than abs(main diagonal element) of this row.
+
+[
+    [3, 0, 1],
+    [1, 6, 1],
+    [1, 2, -5]
+]
+
+For the first row:
+
+diagonalElement = abs(3) = 3
+sumOfOtherElements = abs(0) + abs(1) = 1
+
+3 >= 1, so it is ok.
+
+
+For the second row:
+
+diagonalElement = abs(6) = 6
+sumOfOtherElements = abs(1) + abs(1) = 2
+
+6 >= 2, it is ok 
+
+
+For the third row:
+
+diagonalElement = abs(-5) = 5
+sumOfOtherElements = abs(1) + abs(2) = 3
+
+5 >= 3, it is ok.

@@ -1,0 +1,10 @@
+Relative Error is a measure of how significant the error of a measurement or an approximation is compared to the true or exact value. It provides a way to assess the accuracy of an approximation in relation to the size of the value being measured, making it particularly useful when comparing the precision of measurements of different magnitudes.
+
+Relative error = |ex - app| / |ex|
+
+---------------------------------------------------------
+
+Absolute Error is a measure of the difference between the exact value of a quantity and the approximate value obtained through measurement or calculation. It provides a straightforward assessment of how far off a measurement is from the true value, expressed as a non-negative quantity.
+
+Absolute error = |ex - app|
+

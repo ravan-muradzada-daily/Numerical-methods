@@ -1,0 +1,95 @@
+Intermediate Value Thheorem - IVT 
+------------------------------------------------
+
+Bisection method bases on dividing the given interval two parts and eliminate one which we are sure there is no root. We continue this process until the root is found or the error is less than given error amount.
+
+Most of cases, the problems we are given have the specific interval like [a, b]. So we are wanted to find the root in this interval.
+
+Before diving into the algorithm, firstly we need to prove that there is at least one root in this interval. For that, we use intermediate value theorem. According to this theorem, if f(a) * f(b) < 0, and the function is continios in the given interval, there is at least one root in the given interval.
+If these cases are met, we can use the algorithm.
+
+------------------------------------------------
+
+Imagine we have a function like that:
+
+f(x) = x^3 - 7*x^2 + 14*x - 6; [0, 1]
+
+Using intermediate value theorem, we can prove that the function have the solution in this range.
+
+Now, let's use bisection method.
+
+The midpoint of this range is 0.5. 
+Let's put it into the function. We will get: 
+f(0.5) = -0.625
+Our interval is like that: [0, 0.5, 1]
+Because in both 0 and 0.5 the function values are positive according to IVT, there is no root.
+However, because f(0.5) * f(1) < 0, the root is in this subinterval. Because of that, our current interval is 
+[0.5, 1].
+
+Now, continue the same process.
+The midpoint is 0.75. f(0.75) = 0.984375.
+The interval is like that: [0.5, 0.75, 1].
+Because in both 0.75 and 1, the functions are positive, because of IVT, there is no root.
+The root is in the range of [0.5, 0.75], because 
+f(0.5) * f(0.75) < 0.
+
+
+The same process is going on recursively. If we do not stop the process using breaking statement according to any error value, that will be infinite. However, always we will have stopping (breaking) statements.
+
+
+----------------------------------------------------
+
+What might be stopping condition?
+
+This can change whether we are given the real (exact) root or not.
+
+1) If we are given the real root, 
+|exactRoot - currentRoot| < givenErrorValue.
+
+Also, we may be given the relative error which we can use similar to that. We can write:
+|(exactRoot-currentRoot) / exactRoot| < relativeError
+
+2) If we are not given the real root,
+(b - a) / (2^n) < givenErrorValue.
+
+Here, n is the number of iteration. b is the upper bound of the interval in the n'th iteration, a is the lower bound of the interval in the n'th iteration. 
+
+
+From both conditions, we can get something like that:
+|exactRoot - currentRoot| <= (b-a)/(2^n) < givenErrorValue.
+
+
+----------------------------------------------------
+
+Examples:
+
+
+1) If the exact value is given:
+
+f(x) = x^3 - 7*x^2 + 14*x - 6; [0, 1]. The error value should be less that 0.01. The exact value is (2 - sqrt(2)).
+
+The solution {The solution with the code is in coding part(File name: "01.01.BisectionMethod.py")}:
+
+We already know, according to IVT the function has at least one root in this interval.
+
+
+Now, let's use bisection method.
+
+The midpoint of this range is 0.5. 
+Let's put it into the function. We will get: 
+f(0.5) = -0.625
+Our interval is like that: [0, 0.5, 1]
+Because in both 0 and 0.5 the function values are positive according to IVT, there is no root.
+However, because f(0.5) * f(1) < 0, the root is in this subinterval. Because of that, our current interval is 
+[0.5, 1].
+Now, let's check whether the stopping condition is met or not. currentErrorValue = |(2-sqrt(2)) - 0.5| = 0.0858.
+This is more that 0.01, so we need to continue..
+
+
+2) If the exact value is not given:
+
+We need to do the same things, just at the last, while checking stopping conditions, we use the specific formula for that.
+Our interval again [0, 1], the givenErrorValue 0.01 and exactRoot is not given.
+The code for this problem is in coding part (File name: "01.02.BisectionMethod.py").
+
+{More examples are in Coding part}.

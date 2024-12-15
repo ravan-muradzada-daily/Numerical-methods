@@ -1,0 +1,33 @@
+Sometimes we are given a system of equations which does not have any exact solution. 
+To find approximate solutions for them, we use Least-Squares method.
+
+How does this method work?
+
+We should write the system as augmented matrix. Then we should multiply each side with the tranpose of the given matrix.
+
+After that we can solve the solution using any solution method like Gaussian-Elimination.
+
+Imagine the given matrix is A and we need to find A*x = b.
+
+We should write:
+
+A^T * A * x = A^T * b 
+
+After solving this equation, x is found and it is called "Least squares solution".
+
+
+
+Moreover, in the problems these two things can be asked:
+
+
+1. Least Squares Error Vector:
+
+    it is equal to: b - A * x.
+
+    So after calculatingg x, we can put it here and find "Least Squares Error Vector".
+
+
+2. Least Squares Error:
+
+    It is equal to magnitute of "Least Squares Error Vector".
+    First we should find "Least Squares Error Vector" and then its magnitute.

@@ -1,0 +1,23 @@
+In back substitution, we solve a system of linear equations in an upper triangular form. Unlike forward elimination, where we zero out elements below the diagonal to transform the matrix into an upper triangular matrix, in back substitution, we use the triangular form to solve for variables from the last row upward.
+
+Steps in Back Substitution
+
+-Initialize the Solution Vector:
+
+Create a list x initialized to zero, where each element will store the solution for each variable.
+
+-Starting from the Last Row:
+
+The last row has only one variable (for example, the nth variable). We can solve for this variable directly because there are no other unknowns in the equation. Calculate this variable by dividing the right-hand side value by the diagonal element in the last row.
+
+-Iterate Upwards through Each Row:
+
+For each row moving upwards (from row n-1 to 1), use the variables already solved for to isolate the next variable.
+
+-For each row i, start by setting sum_ equal to the right-hand side value of that row.
+Then, for each known variable in columns to the right of i, subtract its contribution from sum_. This is done with sum_ -= A[i][j] * x[j].
+After all known values have been subtracted, divide sum_ by the diagonal element in the row to solve for the variable in that row.
+
+-Return the Solution:
+
+After processing each row, the list x will contain the solution to the system.

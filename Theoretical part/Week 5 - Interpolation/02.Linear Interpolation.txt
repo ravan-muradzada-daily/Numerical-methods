@@ -1,0 +1,16 @@
+Linear interpolation is a simple method to estimate a value of a function f(x) at point x. To be able to use this method, we should need two points: (x0, f(x0)) and (x1, f(x1)).
+
+To be able to find f(x):
+
+f(x) = f(x0) + ((f(x1) - f(x0)) / (x1 - x0)) * (x - x0).
+
+
+---------------------------
+
+Example:
+
+Find f(x) using Linear interpolation when x = 4. Given points: (2, 4) and (6, 7).
+
+f(4) = 4 + (3 / 4) * 2 
+f(4) = 4 + 1.5 = 5.5
+f(4) = 5.5
