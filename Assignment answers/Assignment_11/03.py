@@ -58,8 +58,8 @@ print(results)
 
 plt.figure(figsize=(10, 6))
 
-plt.plot(x_values, y_values_2nd, label="Second Order Taylor Method")
-plt.plot(x_values, y_values_3rd, label="Third Order Taylor Method")
+plt.plot(x_values, y_values_2nd,color="red", label="Second Order Taylor Method")
+plt.plot(x_values, y_values_3rd,color="blue", label="Third Order Taylor Method")
 
 plt.xlabel('x')
 plt.ylabel('y(x)')

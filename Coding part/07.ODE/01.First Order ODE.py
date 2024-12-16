@@ -19,7 +19,7 @@ def taylor_series_method(x0, y0, delta, target):
     return x_values, y_values
 
 x0, y0 = 1, -4
-target = 1.05
+target = 1.03
 delta = 0.01
 
 x_values, y_values = taylor_series_method(x0, y0, delta, target)
