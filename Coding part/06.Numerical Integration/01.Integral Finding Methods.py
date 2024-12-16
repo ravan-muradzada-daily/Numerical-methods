@@ -112,10 +112,10 @@ results = {
     "Recursive Trapezoid:": rec_tr[-1][0],
     "Romberg:": rmb[-1][-1]
 }
-
-print(f"{"Exact Result:":20} {exact_result:10.3f}\n")
+print(rmb)
+#print(f"{"Exact Result:":20} {exact_result:10.3f}\n")
 
 for i in results:
     curr_error = calculate_true_relative_error(exact_result, results[i])
 
-    print(f"{i:20} {results[i]:10.3f}\t{curr_error:10.5f} %")
+    #print(f"{i:20} {results[i]:10.3f}\t{curr_error:10.5f} %")
