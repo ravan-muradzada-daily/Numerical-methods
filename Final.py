@@ -55,7 +55,7 @@ def lower_upper_sums(a, b, n):
 
     return (lower + upper) / 2.0
 
-def trapezoid(a, b, n):
+def trapezoid_1(a, b, n):
     h = (b - a) / n
     x_i = a + h
     Sum = 0.5 * (f(a) + f(b))
@@ -67,6 +67,16 @@ def trapezoid(a, b, n):
     Sum *= h
 
     return Sum
+
+def trapezoid_2(x, y):
+    res = 0
+    n = len(x)
+    for i in range(n-1):
+        res += (x[i+1] - x[i]) * (y[i+1] + y[i])
+    
+    res *= 0.5
+
+    return res
 
 def recursive_trapezoid(a, b, n):
     approximations = np.zeros([n, n])
