@@ -101,6 +101,9 @@ def romberg(approxs, n):
 
     return approxs
 
+def find_error(a, b, h, f_max):
+    # max|f''(x)| x -> [a,b]
+    return (b-a) * h*h * f_max / 12
 
 # ----------------------------------------------- #
 
