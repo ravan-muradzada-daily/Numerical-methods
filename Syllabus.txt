@@ -1,0 +1,81 @@
+Approximations and Error Analysis
+    • Significant Figures
+    • Accuracy and Precision
+    • Error Definitions
+    • Round-Off Errors
+    • The Taylor Series
+    • Error Propagation
+    • Total Numerical Error
+
+
+----------------------------------------
+
+
+Solutions of Equations of one Variable
+    • The Bisection Method.
+    • The Newton-Raphson Method.
+    • The Secant Method
+    • Nonlinear Systems of Equations.
+    Problems
+
+
+----------------------------------------
+
+
+Iterative Methods for Solving Linear Systems
+    • Newton-Raphson Method
+    • Gauss-Jordan Method Problems
+
+
+----------------------------------------
+
+
+Curve Fitting
+    • Linear Regression
+    • Polynomial Regression
+    • Multiple Linear Regression
+    • General Linear Least Squares
+    • Nonlinear Regression Problems
+
+
+----------------------------------------
+
+
+Interpolation
+    • Linear and Quadratic Interpolation 
+    • Newton Interpolation
+    • Properties of divided differences
+    • Lagrange Interpolation
+    • Inverse Interpolation
+    • Error in Polynomial Interpolation
+
+
+----------------------------------------
+
+
+Numerical Differentiation
+    • High-Accuracy Differentiation Formulas
+    • Richardson Extrapolation
+    • Derivatives of Unequally Spaced Data
+    • Derivatives and Integrals for Data with Errors
+    • Partial Derivatives Problems
+
+
+----------------------------------------
+
+
+Numerical Integration
+    • Rectangular Rule.
+    • Trapezoid Rule
+    • Simpson's Rule
+    • Gaussian Quadrature
+    • Monte Carlo Integration Problems
+
+
+----------------------------------------
+
+
+Numerical Methods for Ordinary differential Equations
+    • Taylor Seeries Method
+    • Euler Method Problems
+
